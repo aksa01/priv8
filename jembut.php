@@ -39,14 +39,14 @@ $c = curl_init("https://comarketing.bpjsketenagakerjaan.go.id/getValidasiTK_KPJ?
         $body   = substr($response, curl_getinfo($c, CURLINFO_HEADER_SIZE));
     }
     if(!preg_match("/DATA DITEMUKAN/", $body)){
-        return "Invalid ".$no;
+        return "MATITOD ".$no;
     }else{
         save($file, $no);
- return "Found! ".$no;   
+ return "LIVEEA! ".$no;   
     }
 }
 ####EDIT HERE####
-$jumlah = 100;
+$jumlah = 500;
 $namafile = "bpjscode.txt";
 $mode = 1; //mode 1 = random all - mode 2 = random with prefix 1502658
 ####END OF EDIT AREA####
