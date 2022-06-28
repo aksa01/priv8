@@ -85,7 +85,7 @@ class Request
         return $this->postData;
     }
 
-    public function setTambah()
+    public function setTambah($tambah)
     {
         $this->tambah = $tambah;
         return $this;
