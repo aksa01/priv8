@@ -315,7 +315,9 @@ class RollingCurl
         return $this->headers;
     }
     /**
-     * @data tambahan
+     * @param array $tambah
+     * @throws \InvalidArgumentException
+     * @return RollingCurl
      */
     public function setTambah($tambah)
     {
@@ -323,21 +325,13 @@ class RollingCurl
         return $this;
     }
     /**
-     * @return array tambah
+     * @return array
      */
     public function getTambah()
     {
         return $this->getTambah;
     }
 
-    /**
-     * @return array
-     */
-    public function getHeaders()
-    {
-        return $this->headers;
-    }
-    /**
      * @param array $options
      * @throws \InvalidArgumentException
      * @return RollingCurl
