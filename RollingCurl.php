@@ -48,7 +48,7 @@ class RollingCurl
         return $this->request($url, "GET", null, $headers, $options);
     }
     
-    public function tambahan($tambah)
+    public function tambah($tambah)
     {
         return $this->request($tambah);
     }
