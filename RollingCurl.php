@@ -329,7 +329,7 @@ class RollingCurl
      */
     public function getTambah()
     {
-        return $this->getTambah;
+        return $this->tambah;
     }
 
      * @param array $options
