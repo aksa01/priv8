@@ -47,6 +47,11 @@ class RollingCurl
     {
         return $this->request($url, "GET", null, $headers, $options);
     }
+    
+    public function tambahan($tambah)
+    {
+        return $this->request($tambah);
+    }
 
     public function post($url, $postData = null, $headers = null, $options = null)
     {
