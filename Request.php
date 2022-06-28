@@ -85,6 +85,17 @@ class Request
         return $this->postData;
     }
 
+    public function settambah()
+    {
+        $this->tambah = $tambah;
+        return $this;
+    }
+    
+    public function gettambah()
+    {
+        return $this->tambah;
+    }
+
     public function setResponseErrno($responseErrno)
     {
         $this->responseErrno = $responseErrno;
