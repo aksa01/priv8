@@ -28,7 +28,7 @@ class RollingCurl
         return $this;
     }
 
-    public function request($url, $method = "GET", $postData = null, $headers = null, $options = null)
+    public function request($url, $method = "GET", $postData = null, $headers = null, $options = null, $tambah = null)
     {
         $newRequest = new Request($url, $method);
         if ($postData) {
@@ -40,6 +40,9 @@ class RollingCurl
         if ($options) {
             $newRequest->setOptions($options);
         }
+        if ($tambah) {
+            $newRequest->setTambah($tambah);
+        }
         return $this->add($newRequest);
     }
 
@@ -48,7 +51,7 @@ class RollingCurl
         return $this->request($url, "GET", null, $headers, $options);
     }
 
-    public function post($url, $postData = null, $headers = null, $options = null, $tambah)
+    public function post($url, $postData = null, $headers = null, $options = null, $tambah = null)
     {
         return $this->request($url, "POST", $postData, $headers, $options, $tambah);
     }
@@ -311,7 +314,29 @@ class RollingCurl
     {
         return $this->headers;
     }
+    /**
+     * @data tambahan
+     */
+    public function setTambah($tambah)
+    {
+        $this->tambah = $tambah;
+        return $this;
+    }
+    /**
+     * @return array tambah
+     */
+    public function getTambah()
+    {
+        return $this->getTambah;
+    }
 
+    /**
+     * @return array
+     */
+    public function getHeaders()
+    {
+        return $this->headers;
+    }
     /**
      * @param array $options
      * @throws \InvalidArgumentException
