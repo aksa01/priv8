@@ -331,7 +331,7 @@ class RollingCurl
     {
         return $this->tambah;
     }
-
+     /**
      * @param array $options
      * @throws \InvalidArgumentException
      * @return RollingCurl
